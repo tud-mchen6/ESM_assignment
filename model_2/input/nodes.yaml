@@ -1,0 +1,23 @@
+nodes:
+  CHE:
+    techs:
+      gas_pp:
+      wind:
+      pv:
+      demand_electricity:
+    available_area: 100
+  DEU:
+    techs:
+      gas_pp:
+      wind:
+      pv:
+      demand_electricity:
+    available_area: 100
+  ITA:
+    techs:
+      gas_pp:
+      wind:
+      pv:
+      demand_electricity:
+    available_area: 100
+    

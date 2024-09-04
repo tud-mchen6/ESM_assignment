@@ -1,0 +1,8 @@
+nodes:
+  AUT:
+    techs:
+      gas_pp:
+      wind:
+      pv:
+      demand_electricity:
+    available_area: 100

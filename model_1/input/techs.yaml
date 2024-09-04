@@ -1,0 +1,63 @@
+tech_groups:
+  interest_rate_setter:
+    cost_interest_rate:
+      data: 0.073  # average wind onshore WACC OECD from [@Steffen:2019]
+      index: monetary
+      dims: costs
+
+techs:
+  pv:
+    name: "Solar photovoltaic power"
+    color: "#F9D956"
+    base_tech: supply
+    inherit: interest_rate_setter
+    carrier_out: electricity
+    carrier_export: electricity
+    source_unit: per_cap
+    area_use_per_flow_cap: 0.125  # 100 km2/GW or 0.1 km2/MW [@Gagnon:2016][@Klauser:2016][@Wirth:2017]
+    # flow_out_parasitic_eff: 0.85 # TODO inverter losses
+    lifetime: 25  # TODO ource
+    cost_flow_cap:
+      data: 52.0  # 10000 EUR/MW TODO source
+      index: monetary
+      dims: costs
+
+  wind:
+    name: "Wind power"
+    color: "#56CBF9FF"
+    base_tech: supply
+    inherit: interest_rate_setter
+    carrier_out: electricity
+    carrier_export: electricity
+    source_unit: per_cap
+    area_use_per_flow_cap: 1.25 # 100 km2/GW [@EuropeanEnvironmentAgency:2009]
+    # flow_out_parasitic_eff: 0.85 # TODO
+    lifetime: 25  # TODO source
+    cost_flow_cap:
+      data: 110.0  # 10000 EUR/MW TODO source
+      index: monetary
+      dims: costs
+
+  demand_electricity:
+    name: "Electrical demand"
+    color: "#072486"
+    base_tech: demand
+    carrier_in: electricity
+  
+  gas_pp:
+    name: "Gas power plant"
+    color: "#FFA07A"
+    base_tech: supply
+    inherit: interest_rate_setter
+    carrier_out: electricity
+    carrier_export: electricity
+    flow_out_eff: 0.6  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
+    lifetime: 25  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
+    cost_flow_cap:
+      data: 84.6  # 10000 EUR/MW Danish Energy Agency, technology_data_for_el_and_dh.xlsx
+      index: monetary
+      dims: costs
+    cost_flow_in:
+      data: 0.006  # 10000 EUR/MWh TODO reference
+      index: monetary
+      dims: costs
