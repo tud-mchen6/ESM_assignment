@@ -14,7 +14,7 @@ config:
 
   solve:
     solver: cbc
-  
+
 parameters:
   objective_cost_weights:
     data: 1

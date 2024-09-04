@@ -15,7 +15,7 @@ config:
 
   solve:
     solver: cbc
-  
+
 parameters:
   objective_cost_weights:
     data: 1
@@ -43,4 +43,3 @@ data_sources:
     columns: [techs, nodes]
     add_dimensions:
       parameters: source_use_max
-  

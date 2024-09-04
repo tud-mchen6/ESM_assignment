@@ -20,4 +20,3 @@ nodes:
       pv:
       demand_electricity:
     available_area: 100
-    
