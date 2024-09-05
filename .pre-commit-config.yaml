@@ -33,5 +33,6 @@ repos:
     rev: v2.3.0
     hooks:
     - id: codespell
+      args: [--skip="*.yaml"]
       additional_dependencies:
         - tomli
