@@ -1,7 +1,7 @@
 name: ESM_assignment
 channels:
     - conda-forge
-    - bioconda    
+    - bioconda
 dependencies:
     - python=3.11
     - matplotlib

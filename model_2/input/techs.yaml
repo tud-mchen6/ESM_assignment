@@ -62,7 +62,7 @@ techs:
     color: "#072486"
     base_tech: demand
     carrier_in: electricity
-  
+
   gas_pp:
     name: "Gas power plant"
     color: "#FFA07A"
