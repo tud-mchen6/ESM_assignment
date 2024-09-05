@@ -1,12 +1,10 @@
 name: ESM_assignment
 channels:
     - conda-forge
-    - bioconda
 dependencies:
     - python=3.11
-    - matplotlib
+    - matplotlib=3.8.4
     - coincbc
     - pip
     - pip:
         - calliope==0.7.0.dev3
-        - gregor==0.0.1
