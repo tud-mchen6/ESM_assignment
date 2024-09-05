@@ -33,5 +33,9 @@ repos:
     rev: v2.3.0
     hooks:
     - id: codespell
+      exclude: >
+          (?x)^(
+              .*\.yaml
+          )$
       additional_dependencies:
         - tomli
