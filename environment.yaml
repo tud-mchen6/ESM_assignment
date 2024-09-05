@@ -4,7 +4,7 @@ channels:
 dependencies:
     - python=3.11
     - matplotlib=3.8.4
-    - coincbc
+    - glpk
     - pip
     - pip:
         - calliope==0.7.0.dev3
