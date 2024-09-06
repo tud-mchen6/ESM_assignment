@@ -1,7 +1,7 @@
 from pathlib import Path
 import calliope
 
-name_model = "model_1"
+name_model = "model_2"
 path_inputs = Path(__file__).parent.parent / name_model / "input" / "model.yaml"
 path_results = Path(__file__).parent.parent / name_model / "results" / "results.nc"
 

@@ -11,7 +11,7 @@ def plot_stacked_bar(df, x, y, stack, color, destination):
     plt.savefig(destination, bbox_inches="tight")
 
 
-name_model = "model_1"
+name_model = "model_2"
 path_results = Path(__file__).parent.parent / name_model / "results" / "results.nc"
 path_plots = Path(__file__).parent.parent / name_model / "plots"
 model = calliope.read_netcdf(path_results)
