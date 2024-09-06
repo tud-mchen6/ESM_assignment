@@ -18,7 +18,7 @@ techs:
     # flow_out_parasitic_eff: 0.85 # TODO inverter losses
     lifetime: 25  # TODO ource
     cost_flow_cap:
-      data: 52.0  # 10000 EUR/MW TODO source
+      data: 520  # million EUR/GW TODO source
       index: monetary
       dims: costs
 
@@ -34,7 +34,7 @@ techs:
     # flow_out_parasitic_eff: 0.85 # TODO
     lifetime: 25  # TODO source
     cost_flow_cap:
-      data: 110.0  # 10000 EUR/MW TODO source
+      data: 1100  # million EUR/GW TODO source
       index: monetary
       dims: costs
 
@@ -54,10 +54,10 @@ techs:
     flow_out_eff: 0.6  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
     lifetime: 25  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
     cost_flow_cap:
-      data: 84.6  # 10000 EUR/MW Danish Energy Agency, technology_data_for_el_and_dh.xlsx
+      data: 846  # million EUR/GW Danish Energy Agency, technology_data_for_el_and_dh.xlsx
       index: monetary
       dims: costs
     cost_flow_in:
-      data: 0.006  # 10000 EUR/MWh TODO reference
+      data: 0.06  # million EUR/GWh TODO reference
       index: monetary
       dims: costs
