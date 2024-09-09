@@ -13,8 +13,11 @@ tech_groups:
     carrier_in: electricity
     carrier_out: electricity
     flow_out_eff_per_distance: 0.99999995  # Set to 1 to avoid loop flows. Can alternatively use flow_out_eff_per_distance
-    lifetime: 60  # euro-calliope assumption TODO source?
-    # TODO set om_annual_investment_fraction: 0.015
+    lifetime: 60  # [@JRC:2014]
+    cost_om_annual:
+      data: 0.015
+      index: monetary
+      dims: costs
     cost_flow_cap_per_distance:
       data: 9e-04  # million EUR/(GW*m) TODO source?
       index: monetary
@@ -35,9 +38,9 @@ techs:
     source_unit: per_cap
     area_use_per_flow_cap: 0.125  # 100 km2/GW or 0.1 km2/MW [@Gagnon:2016][@Klauser:2016][@Wirth:2017]
     # flow_out_parasitic_eff: 0.85 # TODO inverter losses
-    lifetime: 25  # TODO ource
+    lifetime: 25  # [@JRC:2014] Table 7
     cost_flow_cap:
-      data: 520  # million EUR/GW TODO source
+      data: 240  # million EUR/GW | Danish energy agency (technology data for el/dh, 22 photovoltaics large, 2050)
       index: monetary
       dims: costs
 
@@ -51,9 +54,9 @@ techs:
     source_unit: per_cap
     area_use_per_flow_cap: 1.25 # 100 km2/GW [@EuropeanEnvironmentAgency:2009]
     # flow_out_parasitic_eff: 0.85 # TODO
-    lifetime: 25  # TODO source
+    lifetime: 25  # [@JRC:2014] Table 4
     cost_flow_cap:
-      data: 1100  # million EUR/GW TODO source
+      data: 960  # million EUR/GW | Danish energy agency (technology data for el/dh, 20 onshore turbines, 2050)
       index: monetary
       dims: costs
 
@@ -77,6 +80,6 @@ techs:
       index: monetary
       dims: costs
     cost_flow_in:
-      data: 0.06  # million EUR/GWh TODO reference
+      data: 0.00434  # million EUR/GWh TODO: reference
       index: monetary
       dims: costs

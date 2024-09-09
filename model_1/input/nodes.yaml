@@ -5,4 +5,4 @@ nodes:
       wind:
       pv:
       demand_electricity:
-    available_area: 100 # km2
+    available_area: 20 # km2. Not so much for a city, I suppose?
