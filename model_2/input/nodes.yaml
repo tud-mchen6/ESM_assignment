@@ -5,18 +5,18 @@ nodes:
       wind:
       pv:
       demand_electricity:
-    available_area: 100 #km2, random number
+    available_area: 1000 #km2, random number
   DEU:
     techs:
       gas_pp:
       wind:
       pv:
       demand_electricity:
-    available_area: 200 #km2, random number
+    available_area: 2000 #km2, random number
   ITA:
     techs:
       gas_pp:
       wind:
       pv:
       demand_electricity:
-    available_area: 200 #km2, random number
+    available_area: 2000 #km2, random number
