@@ -13,7 +13,7 @@ config:
     ensure_feasibility: true # Switching on unmet demand
 
   solve:
-    solver: cbc
+    solver: glpk
 
 parameters:
   objective_cost_weights:
