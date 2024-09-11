@@ -13,7 +13,8 @@ config:
     ensure_feasibility: true # Switching on unmet demand
 
   solve:
-    solver: cbc
+    solver: glpk
+    shadow_prices: ["system_balance"]
 
 parameters:
   objective_cost_weights:
@@ -28,17 +29,17 @@ data_sources:
     source: timeseries/demand.csv
     rows: timesteps
     columns: [techs, nodes]
-    add_dimensions:
+    add_dims:
       parameters: sink_use_equals
   wind_resource:
     source: timeseries/wind.csv
     rows: timesteps
     columns: [techs, nodes]
-    add_dimensions:
+    add_dims:
       parameters: source_use_max
   pv_resource:
     source: timeseries/pv.csv
     rows: timesteps
     columns: [techs, nodes]
-    add_dimensions:
+    add_dims:
       parameters: source_use_max
