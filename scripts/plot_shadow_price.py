@@ -4,7 +4,7 @@ from pathlib import Path
 from matplotlib.dates import DateFormatter, DayLocator, HourLocator
 
 
-NAME_MODEL = "model_2"
+NAME_MODEL = "model_1"
 
 # define path to load results from and to save plots to
 path_results = Path(__file__).parent.parent / NAME_MODEL / "results" / "results.nc"
