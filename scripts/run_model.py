@@ -1,7 +1,13 @@
 from pathlib import Path
 import calliope
+import sys
 
-name_model = "model_1"
+name_model = sys.argv[1]
+
+MODELS = ["model_1", "model_2"]
+if name_model not in MODELS:
+    raise ValueError(f"Model name must be one of {MODELS}")
+
 path_inputs = Path(__file__).parent.parent / name_model / "input" / "model.yaml"
 path_results = Path(__file__).parent.parent / name_model / "results" / "results.nc"
 

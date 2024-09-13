@@ -1,6 +1,7 @@
 from pathlib import Path
 import calliope
 import matplotlib.pyplot as plt
+import sys
 
 
 def plot_stacked_bar(df, x, y, stack, color, destination):
@@ -11,7 +12,12 @@ def plot_stacked_bar(df, x, y, stack, color, destination):
     plt.savefig(destination, bbox_inches="tight")
 
 
-name_model = "model_2"
+name_model = sys.argv[1]
+
+MODELS = ["model_1", "model_2"]
+if name_model not in MODELS:
+    raise ValueError(f"Model name must be one of {MODELS}")
+
 path_results = Path(__file__).parent.parent / name_model / "results" / "results.nc"
 path_plots = Path(__file__).parent.parent / name_model / "plots"
 model = calliope.read_netcdf(path_results)
