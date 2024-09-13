@@ -14,8 +14,8 @@ model.build()
 print("Solving model")
 model.solve()
 
-print("Results:")
-print(model.results)
+print("Solving model again in operate mode")
+model.build(force=True, mode="operate", operate_use_cap_results=True)
 
 print("Writing results to path: ", path_results)
 model.to_netcdf(path_results)
