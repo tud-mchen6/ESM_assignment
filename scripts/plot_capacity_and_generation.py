@@ -33,7 +33,7 @@ def separe_demand_electricity(df, demand_name="demand_electricity"):
 
 
 flow_cap = (
-    model.results.flow_cap.to_dataframe()
+    model.inputs.flow_cap.to_dataframe()
     .dropna()
     .reset_index()
     .drop(columns=["carriers"])

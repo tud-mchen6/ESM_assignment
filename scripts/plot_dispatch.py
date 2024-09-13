@@ -40,11 +40,9 @@ for node, ax in zip(nodes, axs):
         ax=ax,
         kind="line",
         color=color,
-        linewidth=4,
-        linestyle="",
-        marker="_",
-        mew=2,
-        markersize=15,
+        linewidth=1,
+        linestyle="-",
+        marker="",
         use_index=False,
     )
     ax = flow_out_node.plot(ax=ax, kind="bar", color=color, stacked=True, width=1)
