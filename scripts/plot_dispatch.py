@@ -11,7 +11,7 @@ MODELS = ["model_1", "model_2"]
 if name_model not in MODELS:
     raise ValueError(f"Model name must be one of {MODELS}")
 
-ORDER = ["pv", "wind", "gas_pp"]
+ORDER = ["nuclear_pp", "pv", "wind", "gas_pp"]
 plt.rcParams["font.size"] = "16"
 
 # define path to load results from and to save plots to
