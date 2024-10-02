@@ -10,7 +10,7 @@ config:
 
   build:
     mode: plan # Choices: plan, operate
-    ensure_feasibility: true # Switching on unmet demand
+    ensure_feasibility: false # Switching on unmet demand
     operate_horizon: "744H"
     operate_window: "2H"
 
