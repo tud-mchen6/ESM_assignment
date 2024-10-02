@@ -2,21 +2,45 @@ nodes:
   CHE:
     techs:
       gas_pp:
+        flow_cap_max: 40  # Dummy value
+        flow_cap_min: 40
+      nuclear_pp:
+        flow_cap_max: 3
+        flow_cap_min: 3
       wind:
+        flow_cap_max: 0
+        flow_cap_min: 0
       pv:
+        flow_cap_max: 6
+        flow_cap_min: 6
       demand_electricity:
-    available_area: 1000 #km2, random number
   DEU:
     techs:
+      nuclear_pp:
+        flow_cap_max: 0
+        flow_cap_min: 0
       gas_pp:
+        flow_cap_max: 36
+        flow_cap_min: 36
       wind:
+        flow_cap_max: 60
+        flow_cap_min: 60
       pv:
+        flow_cap_max: 82
+        flow_cap_min: 82
       demand_electricity:
-    available_area: 2000 #km2, random number
   ITA:
     techs:
+      nuclear_pp:
+        flow_cap_max: 0
+        flow_cap_min: 0
       gas_pp:
+        flow_cap_max: 45
+        flow_cap_min: 45
       wind:
+        flow_cap_max: 12
+        flow_cap_min: 12
       pv:
+        flow_cap_max: 30
+        flow_cap_min: 30
       demand_electricity:
-    available_area: 2000 #km2, random number
