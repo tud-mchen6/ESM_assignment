@@ -3,13 +3,11 @@ techs:
     from: CHE
     to: DEU
     template: power_lines
-    distance: 504447.24884831 # m
     flow_cap_max: 0
     flow_cap_min: 0
   CHE_to_ITA:
     from: CHE
     to: ITA
     template: power_lines
-    distance: 539289.6698814376 # m
     flow_cap_max: 0
     flow_cap_min: 0

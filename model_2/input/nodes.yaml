@@ -1,5 +1,7 @@
 nodes:
   CHE:
+    latitude: 46.8182
+    longitude: 8.2275
     techs:
       gas_pp:
         flow_cap_max: 5  # Dummy value
@@ -15,6 +17,8 @@ nodes:
         flow_cap_min: 6
       demand_electricity:
   DEU:
+    latitude: 51.1657
+    longitude: 10.4515
     techs:
       nuclear_pp:
         flow_cap_max: 0
@@ -30,6 +34,8 @@ nodes:
         flow_cap_min: 82
       demand_electricity:
   ITA:
+    latitude: 41.8719
+    longitude: 12.5674
     techs:
       nuclear_pp:
         flow_cap_max: 0
