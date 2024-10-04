@@ -10,7 +10,7 @@ techs:
     name: "Solar photovoltaic power"
     color: "#F9D956"
     base_tech: supply
-    inherit: interest_rate_setter
+    template: interest_rate_setter
     carrier_out: electricity
     source_unit: per_cap
     lifetime: 25  # [@JRC:2014] Table 7
@@ -23,7 +23,7 @@ techs:
     name: "Wind power"
     color: "#56CBF9FF"
     base_tech: supply
-    inherit: interest_rate_setter
+    template: interest_rate_setter
     carrier_out: electricity
     source_unit: per_cap
     lifetime: 25  # [@JRC:2014] Table 4
@@ -42,7 +42,7 @@ techs:
     name: "Gas power plant"
     color: "#FFA07A"
     base_tech: supply
-    inherit: interest_rate_setter
+    template: interest_rate_setter
     carrier_out: electricity
     flow_out_eff: 0.6  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
     lifetime: 25  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
@@ -59,7 +59,7 @@ techs:
     name: "Nuclear power plant"
     color: "#F3007A"
     base_tech: supply
-    inherit: interest_rate_setter
+    template: interest_rate_setter
     carrier_out: electricity
     flow_out_eff: 0.4  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
     lifetime: 50  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
