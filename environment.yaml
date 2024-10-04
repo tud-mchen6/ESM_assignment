@@ -8,3 +8,4 @@ dependencies:
     - pip
     - pip:
         - calliope==0.7.0.dev4
+        - calligraph

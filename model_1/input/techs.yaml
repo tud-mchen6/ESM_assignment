@@ -10,12 +10,9 @@ techs:
     name: "Solar photovoltaic power"
     color: "#F9D956"
     base_tech: supply
-    inherit: interest_rate_setter
+    template: interest_rate_setter
     carrier_out: electricity
-    carrier_export: electricity
     source_unit: per_cap
-    area_use_per_flow_cap: 12.5  # km2/GW [@Gagnon:2016][@Klauser:2016][@Wirth:2017]
-    # flow_out_parasitic_eff: 0.85 # TODO inverter losses
     lifetime: 25  # [@JRC:2014] Table 7
     cost_flow_cap:
       data: 240  # million EUR/GW | Danish energy agency (technology data for el/dh, 22 photovoltaics large, 2050)
@@ -26,12 +23,9 @@ techs:
     name: "Wind power"
     color: "#56CBF9FF"
     base_tech: supply
-    inherit: interest_rate_setter
+    template: interest_rate_setter
     carrier_out: electricity
-    carrier_export: electricity
     source_unit: per_cap
-    area_use_per_flow_cap: 125 # km2/GW [@EuropeanEnvironmentAgency:2009]
-    # flow_out_parasitic_eff: 0.85 # TODO
     lifetime: 25  # [@JRC:2014] Table 4
     cost_flow_cap:
       data: 960  # million EUR/GW | Danish energy agency (technology data for el/dh, 20 onshore turbines, 2050)
@@ -48,11 +42,8 @@ techs:
     name: "Gas power plant"
     color: "#FFA07A"
     base_tech: supply
-    inherit: interest_rate_setter
+    template: interest_rate_setter
     carrier_out: electricity
-    carrier_export: electricity
-    flow_cap_max: 6
-    flow_cap_min: 6
     flow_out_eff: 0.6  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
     lifetime: 25  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
     cost_flow_cap:
@@ -61,5 +52,23 @@ techs:
       dims: costs
     cost_flow_in:
       data: 0.00434  # million EUR/GWh TODO: reference
+      index: monetary
+      dims: costs
+
+  nuclear_pp:
+    name: "Nuclear power plant"
+    color: "#F3007A"
+    base_tech: supply
+    template: interest_rate_setter
+    carrier_out: electricity
+    flow_out_eff: 0.4  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
+    lifetime: 50  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
+    flow_out_min_relative: 0.5
+    cost_flow_cap:
+      data: 3672  # million EUR/GW Danish Energy Agency, technology_data_for_el_and_dh.xlsx
+      index: monetary
+      dims: costs
+    cost_flow_in:
+      data: 0.00175  # million EUR/GWh TODO: reference
       index: monetary
       dims: costs

@@ -2,15 +2,21 @@ from matplotlib import pyplot as plt
 import calliope
 import pandas as pd
 from pathlib import Path
+import sys
 
+
+name_model = sys.argv[1]
+
+MODELS = ["model_1", "model_2"]
+if name_model not in MODELS:
+    raise ValueError(f"Model name must be one of {MODELS}")
+
+ORDER = ["nuclear_pp", "pv", "wind", "gas_pp"]
 plt.rcParams["font.size"] = "16"
 
-NAME_MODEL = "model_1"
-ORDER = ["pv", "wind", "gas_pp"]
-
 # define path to load results from and to save plots to
-path_results = Path(__file__).parent.parent / NAME_MODEL / "results" / "results.nc"
-path_plots = Path(__file__).parent.parent / NAME_MODEL / "plots"
+path_results = Path(__file__).parent.parent / name_model / "results" / "results.nc"
+path_plots = Path(__file__).parent.parent / name_model / "plots"
 
 # # load and prepare results
 model = calliope.read_netcdf(path_results)
@@ -40,11 +46,9 @@ for node, ax in zip(nodes, axs):
         ax=ax,
         kind="line",
         color=color,
-        linewidth=4,
-        linestyle="",
-        marker="_",
-        mew=2,
-        markersize=15,
+        linewidth=1,
+        linestyle="-",
+        marker="",
         use_index=False,
     )
     ax = flow_out_node.plot(ax=ax, kind="bar", color=color, stacked=True, width=1)
