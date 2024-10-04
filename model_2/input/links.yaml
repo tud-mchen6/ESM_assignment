@@ -1,11 +1,11 @@
 techs:
   CHE_to_DEU:
     from: CHE
-    to: ITA
-    inherit: power_lines
+    to: DEU
+    template: power_lines
     distance: 504447.24884831 # m
   CHE_to_ITA:
     from: CHE
     to: ITA
-    inherit: power_lines
+    template: power_lines
     distance: 539289.6698814376 # m
