@@ -2,8 +2,8 @@ nodes:
   CHE:
     techs:
       gas_pp:
-        flow_cap_max: 40  # Dummy value
-        flow_cap_min: 40
+        flow_cap_max: 5  # Dummy value
+        flow_cap_min: 5
       nuclear_pp:
         flow_cap_max: 3
         flow_cap_min: 3
@@ -20,8 +20,8 @@ nodes:
         flow_cap_max: 0
         flow_cap_min: 0
       gas_pp:
-        flow_cap_max: 36
-        flow_cap_min: 36
+        flow_cap_max: 100
+        flow_cap_min: 100
       wind:
         flow_cap_max: 60
         flow_cap_min: 60
@@ -35,8 +35,8 @@ nodes:
         flow_cap_max: 0
         flow_cap_min: 0
       gas_pp:
-        flow_cap_max: 45
-        flow_cap_min: 45
+        flow_cap_max: 60
+        flow_cap_min: 60
       wind:
         flow_cap_max: 12
         flow_cap_min: 12
