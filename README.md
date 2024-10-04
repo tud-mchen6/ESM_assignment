@@ -23,7 +23,7 @@ Or alternatively, substitute `run_model.py` in the second command with the plott
 
 Assume we are modelling for city A that has gas power plants and a nuclear power plan with fixed total capacity. To meet the electricity demand of the city, the above-mentioned power plants and some renewable energy plants are in use.
 
-**Step 1**. Run model 1 without any renewables capacity, then use calligraph to plot the results.
+**Step 1**. Run model 1 without any renewables capacity, then use calligraph to plot the results. Navigate to Timeseries plots, and choose 'flow*' in the drop-down list of Variable. Then, at the bottom of the page, choose 'Original resolution'.
 1. What do you observe as the dispatch pattern between gas and nuclear power plants?
 2. What is the electricity shadow price, and can you explain why it is at this value?
 
