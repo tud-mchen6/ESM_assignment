@@ -2,7 +2,15 @@ nodes:
   city_A:
     techs:
       gas_pp:
+        flow_cap_max: 8
+        flow_cap_min: 8
       nuclear_pp:
+        flow_cap_max: 2
+        flow_cap_min: 2
       wind:
+        flow_cap_max: 0
+        flow_cap_min: 0
       pv:
+        flow_cap_max: 0
+        flow_cap_min: 0
       demand_electricity:

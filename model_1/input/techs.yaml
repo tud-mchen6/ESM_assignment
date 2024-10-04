@@ -13,8 +13,6 @@ techs:
     inherit: interest_rate_setter
     carrier_out: electricity
     source_unit: per_cap
-    flow_cap_max: 0
-    flow_cap_min: 0
     lifetime: 25  # [@JRC:2014] Table 7
     cost_flow_cap:
       data: 240  # million EUR/GW | Danish energy agency (technology data for el/dh, 22 photovoltaics large, 2050)
@@ -28,8 +26,6 @@ techs:
     inherit: interest_rate_setter
     carrier_out: electricity
     source_unit: per_cap
-    flow_cap_max: 5
-    flow_cap_min: 5
     lifetime: 25  # [@JRC:2014] Table 4
     cost_flow_cap:
       data: 960  # million EUR/GW | Danish energy agency (technology data for el/dh, 20 onshore turbines, 2050)
@@ -48,8 +44,6 @@ techs:
     base_tech: supply
     inherit: interest_rate_setter
     carrier_out: electricity
-    flow_cap_max: 8
-    flow_cap_min: 8
     flow_out_eff: 0.6  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
     lifetime: 25  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
     cost_flow_cap:
@@ -67,8 +61,6 @@ techs:
     base_tech: supply
     inherit: interest_rate_setter
     carrier_out: electricity
-    flow_cap_max: 2
-    flow_cap_min: 2
     flow_out_eff: 0.4  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
     lifetime: 50  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
     flow_out_min_relative: 0.5
