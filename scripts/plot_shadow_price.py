@@ -2,13 +2,18 @@ from matplotlib import pyplot as plt
 import calliope
 from pathlib import Path
 from matplotlib.dates import DateFormatter, DayLocator, HourLocator
+import sys
 
 
-NAME_MODEL = "model_1"
+name_model = sys.argv[1]
+
+MODELS = ["model_1", "model_2"]
+if name_model not in MODELS:
+    raise ValueError(f"Model name must be one of {MODELS}")
 
 # define path to load results from and to save plots to
-path_results = Path(__file__).parent.parent / NAME_MODEL / "results" / "results.nc"
-path_plots = Path(__file__).parent.parent / NAME_MODEL / "plots"
+path_results = Path(__file__).parent.parent / name_model / "results" / "results.nc"
+path_plots = Path(__file__).parent.parent / name_model / "plots"
 
 # load and prepare results
 model = calliope.read_netcdf(path_results)
