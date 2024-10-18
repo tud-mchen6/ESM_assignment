@@ -21,7 +21,7 @@ techs:
 
   wind:
     name: "Wind power"
-    color: "#56CBF9FF"
+    color: "#56CBF9"
     base_tech: supply
     template: interest_rate_setter
     carrier_out: electricity
