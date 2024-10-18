@@ -32,12 +32,13 @@ You will find the following directories and files: `model.yaml` is the central f
 1. Look at the timeseries of the shadow price again. What do you observe? How can you explain it?
 2. What can you observe regarding the operation of wind and solar?
 
-### Exercise 2. Intercountry capacity expansion problem
+### Exercise 2. Inter-country power transmission problem
 
 Assume we are modelling three countries: Germany, Switzerland and Italy. Each country has certain amount of available land for renewables with different capacity factors.
 
 **Step 1.** Run model 2 as it sits now and plot the nodal shadow prices.
-1. Are they different? Why / why not?
+1. Look at the dispatch of the three countries and compare. What do you observe?
+2. Are they different? Why / why not?
 
 **Step 2.** Change one parameter in the model or add one technology at one specific node to make the nodal shadow prices equivalent to each other.
 1. What did you do? Why would that work?
