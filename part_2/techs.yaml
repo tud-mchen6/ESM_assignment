@@ -92,11 +92,11 @@ techs:
 
   battery:
     name: "Battery storage"
-    color: "#3B61E3"
+    color: "#f179e7"
     base_tech: storage
     template: interest_rate_setter
-    carrier_in: power
-    carrier_out: power
+    carrier_in: electricity
+    carrier_out: electricity
     # flow_cap_max: 1000 # kW
     # storage_cap_max: .inf
     flow_cap_per_storage_cap_max: 4
