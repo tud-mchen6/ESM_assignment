@@ -1,0 +1,54 @@
+config:
+  init:
+    name: Economic dispatch model with two power plants
+  build:
+    mode: plan
+  solve:
+    solver: gurobi
+    shadow_prices: ["system_balance"]
+
+templates:
+  powerplant:
+    base_tech: supply
+    carrier_out: power
+    lifetime: 25
+
+techs:
+  power_plant_1:
+    template: powerplant
+    name: "Power plant 1"
+    color: "#E37A72"
+    flow_cap_min: 300  # MW
+    flow_cap_max: 300  # MW
+    flow_out_min_relative: 0.16666667  # 1/6 * 300 = 50 MW
+    cost_flow_out:
+      data: 3  # EUR per MWh
+      index: monetary
+      dims: costs
+  power_plant_2:
+    template: powerplant
+    name: "Power plant 2"
+    color: "#E17B72"
+    flow_cap_min: 400  # MW
+    flow_cap_max: 400  # MW
+    flow_out_min_relative: 0.25  # 0.25 * 400 = 100 MW
+    cost_flow_out:
+      data: 4  # EUR per MWh
+      index: monetary
+      dims: costs
+  power_demand:
+    name: "Power demand"
+    color: "#072486"
+    base_tech: demand
+    carrier_in: power
+
+nodes:
+  single_region:
+    techs:
+      power_plant_1:
+      power_plant_2:
+      power_demand:
+        sink_use_equals:
+          data: [300, 500, 700]  # MWh
+          index: ["2024-06-01 12:00:00", "2024-06-01 13:00:00", "2024-06-01 14:00:00"]
+          dims: timesteps
