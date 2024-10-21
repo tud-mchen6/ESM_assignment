@@ -3,11 +3,13 @@ techs:
     from: CHE
     to: DEU
     template: power_lines
-    flow_cap_max: 0
+    color: "#6783E3"
+    # flow_cap_max: 0
     flow_cap_min: 0
   CHE_to_ITA:
     from: CHE
     to: ITA
     template: power_lines
-    flow_cap_max: 0
+    color: "#678354"
+    # flow_cap_max: 0
     flow_cap_min: 0

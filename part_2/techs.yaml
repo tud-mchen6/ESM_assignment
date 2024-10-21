@@ -7,7 +7,7 @@ templates:
 
   power_lines:
     name: "Electrical power distribution"
-    color: "#6783E3"
+    # color: "#6783E3"
     base_tech: transmission
     template: interest_rate_setter
     carrier_in: electricity
@@ -18,14 +18,11 @@ templates:
       data: 0.015
       index: monetary
       dims: costs
-    cost_flow_cap:
-      data: 9e-03  # Dummy value
-      index: monetary
-      dims: costs
-    cost_flow_out:
+    cost_flow_cap_per_distance:
       data: 1e-5  # million EUR/(GW*m) assumption to avoid loop flows
       index: monetary
       dims: costs
+
 
 techs:
   pv:
@@ -90,5 +87,25 @@ techs:
       dims: costs
     cost_flow_in:
       data: 0.00175  # million EUR/GWh
+      index: monetary
+      dims: costs
+
+  battery:
+    name: "Battery storage"
+    color: "#3B61E3"
+    base_tech: storage
+    template: interest_rate_setter
+    carrier_in: power
+    carrier_out: power
+    # flow_cap_max: 1000 # kW
+    # storage_cap_max: .inf
+    flow_cap_per_storage_cap_max: 4
+    # 0.95 * 0.95 = 0.9025 round trip efficiency
+    flow_out_eff: 0.95
+    flow_in_eff: 0.95
+    storage_loss: 0 # No loss over time assumed
+    lifetime: 25
+    cost_storage_cap:
+      data: 200  # million USD per GWh storage capacity
       index: monetary
       dims: costs
