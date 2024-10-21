@@ -1,30 +1,32 @@
 import:
   - "techs.yaml"
-  - "nodes.yaml"
 
 config:
   init:
-    name: model_1
-    calliope_version: 0.7.0
-    time_subset: ["2018-01-01", "2018-01-31"]
-
+    name: Model Land
+    # time_subset: ["2018-01-01", "2018-01-31"]
   build:
-    mode: plan # Choices: plan, operate
-    ensure_feasibility: false # Switching on unmet demand
-    operate_horizon: "744H"
-    operate_window: "2H"
-
+    mode: plan
   solve:
     solver: glpk
     shadow_prices: ["system_balance"]
 
-parameters:
-  objective_cost_weights:
-    data: 1
-    index: monetary
-    dims: costs
-  # `bigM` sets the scale of unmet demand, which cannot be too high, otherwise the optimisation will not converge
-  bigM: 1e6
+nodes:
+  Model_Land:
+    techs:
+      gas:
+        flow_cap_max: 8  # GW
+        flow_cap_min: 8  # GW
+      nuclear:
+        flow_cap_max: 2  # GW
+        flow_cap_min: 2  # GW
+      wind:
+        flow_cap_max: 0  # GW
+        flow_cap_min: 0  # GW
+      pv:
+        flow_cap_max: 0  # GW
+        flow_cap_min: 0  # GW
+      demand_electricity:
 
 data_sources:
   demand:
