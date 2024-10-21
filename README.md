@@ -1,21 +1,15 @@
-# ESM_assignment
+# `calliope-tutorial`
 
 ## Getting started
 
-To set up a conda environment for the toy models, run in the terminal:
+Follow these [installation instructions](https://github.com/sjpfenninger/optimisation-course/blob/main/README.md) to set up a Python environment with everything necessary installed.
 
-    conda env create -f environment.yaml
+Inside a Jupyter Notebook, you can run a model with these two lines of code - the `!` means execution of a tool outside of Python, and you could also run these two commands (without the `!` in a terminal or shell window if you prefer that):
 
-To run a model, navigate to the directory `scripts`, then run in the terminal:
-
-    python run_model.py model_1
-if you want to run model_1.
-
-To plot the results, run this command in the terminal, and it should direct you to a web application where you can select different types of plots of the model you select.
-
-    calligraph your_model_results.nc
-
-Or alternatively, substitute `run_model.py` in the second command with the plotting script that you want to call.
+```bash
+!calliope run economic_dispatch/model.yaml --save_netcdf results.nc
+!calligraph results.nc
+```
 
 ## Exercise questions
 
