@@ -66,14 +66,13 @@ techs:
     base_tech: supply
     template: interest_rate_setter
     carrier_out: electricity
-    flow_out_eff: 0.6  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
     lifetime: 25  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
     cost_flow_cap:
       data: 846  # million EUR/GW Danish Energy Agency, technology_data_for_el_and_dh.xlsx
       index: monetary
       dims: costs
     cost_flow_in:
-      data: 0.00434  # million EUR/GWh TODO: reference
+      data: 0.00434  # million EUR/GWh
       index: monetary
       dims: costs
 
@@ -83,7 +82,6 @@ techs:
     base_tech: supply
     template: interest_rate_setter
     carrier_out: electricity
-    flow_out_eff: 0.4  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
     lifetime: 50  # Danish Energy Agency, technology_data_for_el_and_dh.xlsx
     flow_out_min_relative: 0.5
     cost_flow_cap:
@@ -91,6 +89,6 @@ techs:
       index: monetary
       dims: costs
     cost_flow_in:
-      data: 0.00175  # million EUR/GWh TODO: reference
+      data: 0.00175  # million EUR/GWh
       index: monetary
       dims: costs

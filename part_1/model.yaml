@@ -4,7 +4,7 @@ import:
 config:
   init:
     name: Model Land
-    # time_subset: ["2018-01-01", "2018-01-31"]
+    time_subset: ["2018-01-01", "2018-01-31"]
   build:
     mode: plan
   solve:
