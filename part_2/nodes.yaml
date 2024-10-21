@@ -4,6 +4,7 @@ nodes:
     longitude: 8.2275
     techs:
       gas_pp:
+        flow_cap_max: 1 # Dummy value, there's not much gas in CHE at the moment
       nuclear_pp:
         flow_cap_max: 3
         flow_cap_min: 3
