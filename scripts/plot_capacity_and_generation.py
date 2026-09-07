@@ -1,7 +1,8 @@
+import sys
 from pathlib import Path
+
 import calliope
 import matplotlib.pyplot as plt
-import sys
 
 
 def plot_stacked_bar(df, x, y, stack, color, destination):
