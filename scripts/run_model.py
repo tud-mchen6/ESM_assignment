@@ -1,6 +1,7 @@
-from pathlib import Path
-import calliope
 import sys
+from pathlib import Path
+
+import calliope
 
 name_model = sys.argv[1]
 
