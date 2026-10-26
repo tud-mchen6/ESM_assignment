@@ -1,9 +1,9 @@
-from matplotlib import pyplot as plt
+import sys
+from pathlib import Path
+
 import calliope
 import pandas as pd
-from pathlib import Path
-import sys
-
+from matplotlib import pyplot as plt
 
 name_model = sys.argv[1]
 
