@@ -1,9 +1,9 @@
-from matplotlib import pyplot as plt
-import calliope
-from pathlib import Path
-from matplotlib.dates import DateFormatter, DayLocator, HourLocator
 import sys
+from pathlib import Path
 
+import calliope
+from matplotlib import pyplot as plt
+from matplotlib.dates import DateFormatter, DayLocator, HourLocator
 
 name_model = sys.argv[1]
 
